@@ -1,10 +1,8 @@
 import React from "react";
 import CoffeeMug from "../assets/CoffeeMug.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin, github } from "@fortawesome/free-brands-svg-icons";
-import { faFile } from "@fortawesome/free-solid-svg-icons";
-import Resume from "../assets/Resume.docx"
-import { Link, useNavigate } from "react-router-dom";
+import { faGithub, faLinkedin, github} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faFile } from "@fortawesome/free-solid-svg-icons";
 
 
 function Header() {
@@ -57,11 +55,9 @@ function Header() {
             <div className="header__img">
               <img src={CoffeeMug} alt="" />
             </div>
-            <div className="email__btn--wrapper">
-              <div className="email__btn">
-                <img src="" alt="" className="email__img" />
+              <div className="envelope__btn">
+                <FontAwesomeIcon icon={faEnvelope} className="envelope__img" />
               </div>
-            </div>
           </div>
         </div>
       </div>

@@ -4,10 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCircleHalfStroke, faFile } from '@fortawesome/free-solid-svg-icons';
+import { faCircleHalfStroke, faFile, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin,  } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faCircleHalfStroke, faGithub, faLinkedin, faFile)
+
+library.add(faCircleHalfStroke, faGithub, faLinkedin, faFile, faEnvelope)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
