@@ -8,18 +8,17 @@
 }
 
 body {
-  background-color: rgb(218, 172, 113);
+  background-color: #d3b083;
 }
 
 #section {
   width: 100%;
   max-width: 1920px;
-  height: 8vh;
 }
 
 .container {
   width: 100%;
-  padding: 12px 10px;
+  padding: 12px 10px 0 10px;
 }
 
 .row {
@@ -33,11 +32,34 @@ a {
   color: black;
 }
 
+li {
+  list-style-type: none;
+}
+
+.dark__orange {
+  color: #c27004;
+  font-weight: 700;
+}
+
+.btn {
+  width: 34px;
+  height: 34px;
+  background-color: #c27004;
+  border-radius: 99px;
+  border: none;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
 /*
 
 NAV
 
 */
+
+#nav__section {
+  height: 8vh;
+}
 
 .nav__img {
   width: 100px;
@@ -79,4 +101,65 @@ NAV
   border: none;
   border-radius: 500px;
   background-color: transparent;
+}
+
+/*
+
+HEADER
+
+*/
+
+.header__container {
+  height: 87vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.header__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__info {
+  margin-right: 80px;
+}
+
+.header__title {
+  font-size: 80px;
+}
+
+.header__para {
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+  max-width: 350px;
+  line-height: 30px;
+  margin: 20px 0;
+}
+
+.social__link--buttons {
+  display: flex;
+  align-items: center;
+}
+
+.github,
+.linkedin,
+.resume {
+  width: 42px;
+  height: 42px;
+}
+
+.github__img,
+.linkedin__img,
+.resume__img {
+  width: 20px;
+  height: 20px;
+}
+
+.header__img {
+  margin-top: 50px;
+  transform: rotateY(180deg);
 }

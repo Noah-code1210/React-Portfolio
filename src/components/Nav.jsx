@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Nav() {
   return (
     <>
-      <div id="section">
+      <div id="section nav__section">
         <div className="container">
           <div className="row">
             <figure className="nav__img--wrapper">
@@ -21,7 +21,7 @@ function Nav() {
               <li className="nav__link">
                 <a href="#contact">Contact</a>
               </li>
-              <div className="dark-or-light btn">
+              <div className="dark-or-light">
                 <FontAwesomeIcon icon="circle-half-stroke" className="dark-or-light__img" />
               </div>
             </ul>
