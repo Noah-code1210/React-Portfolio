@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faLinkedin,
-  github,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faFile } from "@fortawesome/free-solid-svg-icons";
 import Location from "../assets/Location.png";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 function Header() {
-  const [openMenu, setOpenMenu] = useState(false)
-
+  const [openMenu, setOpenMenu] = useState(false);
 
   function navToGithub() {
     window.open("https://github.com/Noah-code1210");
@@ -28,27 +26,43 @@ function Header() {
 
   return (
     <div>
-      <div id="section" >
+      <div id="section">
         <div className="container header__container">
           <div className="header__row">
             <div className="header__info">
-              <h1 className="header__title">
+              <h1
+                className="header__title"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
                 Hey
                 <br />
                 <span className="dark__blue">I'm Noah.</span>
               </h1>
-              <p className="location">
+              <p
+                className="location"
+                data-aos="fade-up"
+                data-aos-duration="1250"
+              >
                 <img src={Location} alt="" className="location__img" />
                 Philadelphia, PA
               </p>
-              <p className="header__para">
+              <p
+                className="header__para"
+                data-aos="fade-up"
+                data-aos-duration="1500"
+              >
                 I'm a
                 <span className="dark__blue"> frontend software engineer </span>
                 who loves to design and build innovative web applications!
                 Here's a bit more
                 <span className="dark__blue"> about me.</span>
               </p>
-              <div className="social__link--buttons">
+              <div
+                className="social__link--buttons"
+                data-aos="fade-up"
+                data-aos-duration="1750"
+              >
                 <button className="github btn" onClick={navToGithub}>
                   <FontAwesomeIcon icon={faGithub} className="github__img" />
                 </button>
