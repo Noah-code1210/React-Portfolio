@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import myLogo from "../assets/mylogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useSearchParams } from "react-router-dom";
 
 function Nav() {
+
+
   return (
     <>
       <div id="section nav__section">
@@ -21,7 +24,7 @@ function Nav() {
               <li className="nav__link">
                 <a href="#contact">Contact</a>
               </li>
-              <div className="dark-or-light">
+              <div className="dark-or-light" >
                 <FontAwesomeIcon icon="circle-half-stroke" className="dark-or-light__img" />
               </div>
             </ul>

@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #d3b083;
+  background-color: #a7beff;
 }
 
 #section {
@@ -36,15 +36,15 @@ li {
   list-style-type: none;
 }
 
-.dark__orange {
-  color: #c27004;
+.dark__blue {
+  color: #003cff;
   font-weight: 700;
 }
 
 .btn {
   width: 34px;
   height: 34px;
-  background-color: #c27004;
+  background-color: #003cff;
   border-radius: 99px;
   border: none;
   margin-right: 12px;
@@ -137,7 +137,21 @@ HEADER
   width: 100%;
   max-width: 350px;
   line-height: 30px;
-  margin: 20px 0;
+  margin-bottom: 20px;
+}
+
+.location {
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.location__img {
+  width: 26px;
+  height: 26px;
+  margin-right: 10px;
 }
 
 .social__link--buttons {
@@ -157,11 +171,13 @@ HEADER
 .resume__img {
   width: 20px;
   height: 20px;
+  color: white;
 }
 
 .header__img {
   margin-top: 50px;
-  transform: rotateY(180deg);
+  border-radius: 100px;
+  overflow: hidden;
 }
 
 .envelope__btn {
