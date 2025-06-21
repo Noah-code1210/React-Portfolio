@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faFile } from "@fortawesome/free-solid-svg-icons";
 import Location from "../assets/Location.png";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 AOS.init();
 
 function Header() {
@@ -77,8 +77,28 @@ function Header() {
                 </button>
               </div>
             </div>
-            <div className="header__img">
-              <img src="" alt="" />
+            <div className="header__scroll--btns">
+              <button
+                className="experience hover-btn"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                Experience
+              </button>
+              <button
+                className="tech hover-btn"
+                data-aos="fade-left"
+                data-aos-duration="1250"
+              >
+                Technology
+              </button>
+              <button
+                className="projects hover-btn"
+                data-aos="fade-left"
+                data-aos-duration="1500"
+              >
+                Projects
+              </button>
             </div>
             <div className="envelope__btn">
               <FontAwesomeIcon icon={faEnvelope} className="envelope__img" />
