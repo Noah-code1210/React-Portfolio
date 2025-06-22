@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 AOS.init();
 
 function Header() {
-  const [openMenu, setOpenMenu] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   function navToGithub() {
     window.open("https://github.com/Noah-code1210");
@@ -100,9 +100,20 @@ function Header() {
                 Projects
               </button>
             </div>
-            <div className="envelope__btn">
+            <div className="envelope__btn" onClick={() => setOpenModal(true)}>
               <FontAwesomeIcon icon={faEnvelope} className="envelope__img" />
             </div>
+           {openModal && <div className="modal">
+            <div className="close__modal" onClick={() => setOpenModal(false)}>
+              X
+            </div>
+                <div className="modal__left">
+                  About Me 
+                </div>
+                <div className="modal__right">
+                  Contact Me
+                </div>
+            </div>}
           </div>
         </div>
       </div>

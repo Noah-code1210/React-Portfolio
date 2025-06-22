@@ -3,13 +3,18 @@ import SkinstricPNG from "../assets/Skinstric.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from "react-router-dom";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function Experience() {
-  const navigate = useNavigate()
 
   function navToAI() {
-    navigate("https://skinstric-ai-gules.vercel.app/")
+    window.open("https://skinstric-ai-gules.vercel.app/")
   }
+
+  function navToGithub() {
+    window.open("https://github.com/Noah-code1210/Skinstric-AI")
+  }
+
   return (
     <>
       <div id="section experience__section">
@@ -48,7 +53,10 @@ function Experience() {
               <img src={SkinstricPNG} alt="" className="experience__img" />
               <div className="live__links">
                 <div className="vercel__link" onClick={navToAI}>
-                  <FontAwesomeIcon icon={faLink} className="vercel__link"/>
+                  <FontAwesomeIcon icon={faLink} className="link"/>
+                </div>
+                <div className="vercel__link" onClick={navToGithub}>
+                  <FontAwesomeIcon icon={faGithub} className="link"/>
                 </div>
               </div>
             </div>

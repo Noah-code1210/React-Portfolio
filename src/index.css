@@ -61,6 +61,10 @@ li {
   transition: all 300ms ease !important;
 }
 
+.modal {
+  
+}
+
 /*
 
 NAV
@@ -299,10 +303,14 @@ EXPERIENCE
   padding: 6px;
 }
 
-.vercel__link {
+.live__links {
+  display: flex;
+}
+
+.link {
   width: 34px;
   height: 34px;
   color: white;
-  margin: 6px 6px 0 0 ;
+  margin: 6px 10px 0 0 ;
   cursor: pointer;
 }
