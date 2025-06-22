@@ -278,15 +278,31 @@ EXPERIENCE
   max-width: 700px;
 }
 
+.experience__img--wrapper {
+  border: 2px solid black;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #000000;
+}
+
 .experience__img--title {
   font-size: 26px;
   font-weight: 500;
   margin-bottom: 18px;
+  color: white;
 }
 
 .experience__img {
-  background-color: rgb(221, 221, 221);
+  background-color: #ffffff;
   border: none;
   border-radius: 5px;
   padding: 6px;
+}
+
+.vercel__link {
+  width: 34px;
+  height: 34px;
+  color: white;
+  margin: 6px 6px 0 0 ;
+  cursor: pointer;
 }
