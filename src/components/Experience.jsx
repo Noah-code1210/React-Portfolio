@@ -52,7 +52,7 @@ function Experience() {
             </div>
             <div className={`video__wrapper ${showVideo ? "show" : ""}`}>
               <div className="video">
-                <video src={Video} autoPlay="true" className="video__edit"/>
+                <video src={Video} autoPlay className="video__edit"/>
               </div>
             </div>
             <div

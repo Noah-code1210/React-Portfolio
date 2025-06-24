@@ -2,7 +2,7 @@ import React from "react";
 import Nav from "./Nav";
 import Header from "./Header";
 import Experience from "./Experience";
-import Skills from "./Skills";
+import Technology from "./Technology";
 
 function Home() {
   return (
@@ -10,7 +10,7 @@ function Home() {
       <Nav />
       <Header />
       <Experience />
-      <Skills />
+      <Technology />
     </>
   );
 }

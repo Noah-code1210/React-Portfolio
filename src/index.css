@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #a7beff;
+  background-color: #ffbc7d;
 }
 
 #section {
@@ -360,11 +360,11 @@ EXPERIENCE
 
 /* 
 
-SKILLS
+TECHNOLOGY
 
 */
 
-.skills__container {
+.tech__container {
   margin-top: 180px;
   height: 90vh;
 }
