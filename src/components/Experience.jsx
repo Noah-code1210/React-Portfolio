@@ -1,63 +1,74 @@
-import React from "react";
-import SkinstricPNG from "../assets/Skinstric.png"
+import React, { useState } from "react";
+import SkinstricPNG from "../assets/Skinstric.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLink } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from "react-router-dom";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import Video from "../Video/PortfolioVideo.mp4"
 
 function Experience() {
+  const [showVideo, setShowVideo] = useState(false);
+  const [blurImg, setBlurImg] = useState(false);
+
+  function handleMouseEnter() {
+    setShowVideo(true);
+    setBlurImg(true);
+  }
+  function handleMouseLeave() {
+    setShowVideo(false);
+    setBlurImg(false);
+  }
 
   function navToAI() {
-    window.open("https://skinstric-ai-gules.vercel.app/")
+    window.open("https://skinstric-ai-gules.vercel.app/");
   }
 
   function navToGithub() {
-    window.open("https://github.com/Noah-code1210/Skinstric-AI")
+    window.open("https://github.com/Noah-code1210/Skinstric-AI");
   }
 
   return (
     <>
       <div id="section experience__section">
         <div className="container">
-          <h1 className="experience__title">Experience</h1>
+          <h1 className="section__title">Experience</h1>
           <div className="experience__info">
             <div className="experience__text">
               <h2 className="experience__intern--title">
                 Skinstric Virtual Internship
               </h2>
               <h3 className="experience__para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Incidunt eos dolores, labore reprehenderit non laborum et
-                molestias molestiae beatae fuga perferendis cupiditate nobis,
-                voluptas esse enim maiores sit tempora. Officia id odio totam
-                blanditiis deleniti cupiditate nihil? Vitae numquam error
-                voluptates molestiae repellat rem in dolor adipisci praesentium?
-                Sequi voluptatum distinctio repudiandae molestias reprehenderit,
-                ipsa dolorem. Temporibus laboriosam in excepturi.
-              </h3>
-              <h3 className="experience__para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Incidunt eos dolores, labore reprehenderit non laborum et
-                molestias molestiae beatae fuga perferendis cupiditate nobis,
-                voluptas esse enim maiores sit tempora. Officia id odio totam
-                blanditiis deleniti cupiditate nihil? Vitae numquam error
-                voluptates molestiae repellat rem in dolor adipisci praesentium?
-                Sequi voluptatum distinctio repudiandae molestias reprehenderit,
-                ipsa dolorem. Temporibus laboriosam in excepturi.
+                For this virtual internship, I built a responsive website for a
+                skincare brand known for their AI-driven solutions. I used
+                React.js as the main framework, along with other tech like HTML,
+                CSS, and JavaScript to design and develop user-friendly
+                interfaces.
+                <br />
+                <br />
+                Throughout this internship, I gained hands-on experience
+                collaborating remotely, implementing best practices, and
+                aligning tech solutions with the brand’s innovative AI-focused
+                mission.
               </h3>
             </div>
-            <div className="experience__img--wrapper">
-              <div className="experience__img--title">
-                Skinstric A.I
+            <div className={`video__wrapper ${showVideo ? "show" : ""}`}>
+              <div className="video">
+                <video src={Video} autoPlay="true" className="video__edit"/>
               </div>
+            </div>
+            <div
+              className={`experience__img--wrapper ${blurImg ? "blur" : ""}`}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div className="experience__img--title">Skinstric A.I</div>
               <img src={SkinstricPNG} alt="" className="experience__img" />
-              <div className="live__links">
-                <div className="vercel__link" onClick={navToAI}>
-                  <FontAwesomeIcon icon={faLink} className="link"/>
-                </div>
-                <div className="vercel__link" onClick={navToGithub}>
-                  <FontAwesomeIcon icon={faGithub} className="link"/>
-                </div>
+            </div>
+            <div className="live__links">
+              <div className="vercel__link" onClick={navToAI}>
+                <FontAwesomeIcon icon={faLink} className="link" />
+              </div>
+              <div className="vercel__link" onClick={navToGithub}>
+                <FontAwesomeIcon icon={faGithub} className="link" />
               </div>
             </div>
           </div>
