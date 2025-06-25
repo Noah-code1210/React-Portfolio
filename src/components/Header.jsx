@@ -44,7 +44,6 @@ function Header() {
                 data-aos="fade-up"
                 data-aos-duration="1250"
               >
-                <img src={Location} alt="" className="location__img" />
                 Philadelphia, PA
               </p>
               <p
@@ -54,9 +53,8 @@ function Header() {
               >
                 I'm a
                 <span className="dark__blue"> frontend software engineer </span>
-                who loves to design and build innovative web applications!
-                Here's a bit more
-                <span className="dark__blue"> about me.</span>
+                looking for work. Here is some more info
+                <span className="dark__blue dark__blue--about" onClick={() => setOpenModal(true)}> about me.</span>
               </p>
               <div
                 className="social__link--buttons"

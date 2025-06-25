@@ -37,14 +37,18 @@ li {
 }
 
 .dark__blue {
-  color: #003cff;
+  color: #ff830f;
   font-weight: 700;
+}
+
+.dark__blue--about {
+  cursor: pointer;
 }
 
 .btn {
   width: 34px;
   height: 34px;
-  background-color: #003cff;
+  background-color: #ff830f;
   border-radius: 99px;
   border: none;
   margin-right: 12px;
@@ -52,7 +56,7 @@ li {
 }
 
 .hover-btn:hover {
-  background-color: #003cff;
+  background-color: #ff830f;
   color: black;
   cursor: pointer;
 }
@@ -159,7 +163,7 @@ HEADER
 }
 
 .header__para {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   width: 100%;
   max-width: 350px;
@@ -198,7 +202,7 @@ HEADER
 .resume__img {
   width: 20px;
   height: 20px;
-  color: white;
+  color: black;
 }
 
 .header__scroll--btns {
@@ -220,7 +224,7 @@ HEADER
   margin-bottom: 40px;
   border: none;
   border-radius: 5px;
-  color: #a7beff;
+  color: #ffbc7d;
   background-color: #000000;
 }
 
@@ -367,4 +371,30 @@ TECHNOLOGY
 .tech__container {
   margin-top: 180px;
   height: 90vh;
+}
+
+.tech__list--wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 290px;
+}
+
+.technology__img {
+  width: 200px;
+  height: 200px;
+  margin: 0 150px 160px 0
+}
+
+.technology__title {
+  display: none;
+}
+
+/* 
+
+PROJECTS
+
+*/
+
+.projects__container {
+  margin-top: 150px;
 }
