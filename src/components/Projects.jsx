@@ -67,17 +67,16 @@ function Projects() {
               <div className="project__text">
                 <div className="project__title">Skinstric A.I</div>
                 <div className="project__description">
-                  For this project, I created an online book store that displays
-                  a handful of highly rated books for people to view and look
-                  through. I also implemented a checkout feature, where the user
-                  can add their favorite books to the cart, and see how much it
-                  would cost to purchase.
+                  This project I created was for my virtual internship listed above.
+                  The main objective was to not only make the website user friendly, but also
+                  give it a unique vibe for the users to enjoy their experience. I also implemented
+                  rest API's to give the most accurate results possible.
                 </div>
                 <br />
                 <div className="technologies__used--title">
                   Technologies Used:
                   <div className="technologies__used--para">
-                    React, Git, HTML, CSS, JS
+                    React, Git, HTML, CSS, JS, Vercel, Node.js
                   </div>
                 </div>
                 <div className="project__links">
@@ -97,17 +96,14 @@ function Projects() {
               <div className="project__text">
                 <div className="project__title">Ultraverse NFT</div>
                 <div className="project__description">
-                  For this project, I created an online book store that displays
-                  a handful of highly rated books for people to view and look
-                  through. I also implemented a checkout feature, where the user
-                  can add their favorite books to the cart, and see how much it
-                  would cost to purchase.
+                  This project was also for an internship, and its main purpose was to gain more knowledge
+                  on fetching API data and displaying it in multiple different places.
                 </div>
                 <br />
                 <div className="technologies__used--title">
                   Technologies Used:
                   <div className="technologies__used--para">
-                    React, Git, HTML, CSS, JS
+                    React, Git, HTML, CSS, JS, Vercel, Node.js
                   </div>
                 </div>
                 <div className="project__links">
