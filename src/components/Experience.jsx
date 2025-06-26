@@ -1,14 +1,18 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
 import SkinstricPNG from "../assets/Skinstric.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Video from "../Video/PortfolioVideo.mp4";
+import { ScrollContext } from "../contexts/ScrollContext.js"; 
 
 function Experience() {
+  // <--- USE useContext TO GET THE SPECIFIC REF FOR THIS COMPONENT
+  const { experienceRef } = useContext(ScrollContext);
+
   const [showVideo, setShowVideo] = useState(false);
   const [blurImg, setBlurImg] = useState(false);
-  const MyComponentRef = useRef(null);
+  // REMOVE: const MyComponentRef = useRef(null); // This is no longer needed here
 
   function handleMouseEnter() {
     setShowVideo(true);
@@ -29,7 +33,8 @@ function Experience() {
 
   return (
     <>
-      <div ref={MyComponentRef} id="section experience__section experience">
+      {/* <--- ATTACH THE REF OBTAINED FROM CONTEXT TO THE MAIN WRAPPING DIV/SECTION */}
+      <div ref={experienceRef} id="section experience__section experience">
         <div className="container">
           <h1 className="section__title">Experience</h1>
           <div className="experience__info">

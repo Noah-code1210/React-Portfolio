@@ -1,24 +1,28 @@
-import React, { useRef, useState } from "react";
+import React, { useState, useContext } from "react"; // Make sure useContext is imported
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faFile } from "@fortawesome/free-solid-svg-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
-import Experience from "./Experience";
+import { ScrollContext } from "../contexts/ScrollContext.js"; // <--- IMPORT THE CONTEXT HERE
+
 AOS.init();
 
 function Header() {
-  const myComponentRef = useRef(null);
-
-  const scrollToComponent = () => {
-    if (myComponentRef.current) {
-      myComponentRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  // <--- USE useContext TO GET THE REFS AND SCROLL FUNCTION
+  const { experienceRef, technologyRef, projectsRef, scrollToSection } =
+    useContext(ScrollContext);
 
   const [openModal, setOpenModal] = useState(false);
   const navigate = useNavigate();
+
+  const handleScrollToBottom = () => {
+    window.scrollTo({
+      top: 2800,
+      behavior: "smooth", // For smooth scrolling animation
+    });
+  };
 
   function navToGithub() {
     window.open("https://github.com/Noah-code1210");
@@ -63,7 +67,7 @@ function Header() {
               >
                 I'm a
                 <span className="dark__blue"> frontend software engineer </span>
-                looking for work. Here is some more info
+                looking for work. Here is some more information
                 <span
                   className="dark__blue dark__blue--about"
                   onClick={() => setOpenModal(true)}
@@ -93,7 +97,7 @@ function Header() {
             </div>
             <div className="header__scroll--btns">
               <button
-                onClick={scrollToComponent}
+                onClick={() => scrollToSection(experienceRef)}
                 className="experience hover-btn"
                 data-aos="fade-left"
                 data-aos-duration="1000"
@@ -101,6 +105,7 @@ function Header() {
                 Experience
               </button>
               <button
+                onClick={() => scrollToSection(technologyRef)}
                 className="tech hover-btn"
                 data-aos="fade-left"
                 data-aos-duration="1250"
@@ -108,6 +113,7 @@ function Header() {
                 Technology
               </button>
               <button
+                onClick={() => scrollToSection(projectsRef)}
                 className="projects hover-btn"
                 data-aos="fade-left"
                 data-aos-duration="1500"
@@ -130,6 +136,9 @@ function Header() {
                 <div className="modal__right">Contact Me</div>
               </div>
             )}
+            <div className="scroll__down" onClick={handleScrollToBottom}>
+              <div className="scroll__down--btn"></div>
+            </div>
           </div>
         </div>
       </div>
