@@ -1,14 +1,24 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faFile } from "@fortawesome/free-solid-svg-icons";
-import Location from "../assets/Location.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useNavigate } from "react-router-dom";
+import Experience from "./Experience";
 AOS.init();
 
 function Header() {
+  const myComponentRef = useRef(null);
+
+  const scrollToComponent = () => {
+    if (myComponentRef.current) {
+      myComponentRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const [openModal, setOpenModal] = useState(false);
+  const navigate = useNavigate();
 
   function navToGithub() {
     window.open("https://github.com/Noah-code1210");
@@ -54,7 +64,13 @@ function Header() {
                 I'm a
                 <span className="dark__blue"> frontend software engineer </span>
                 looking for work. Here is some more info
-                <span className="dark__blue dark__blue--about" onClick={() => setOpenModal(true)}> about me.</span>
+                <span
+                  className="dark__blue dark__blue--about"
+                  onClick={() => setOpenModal(true)}
+                >
+                  {" "}
+                  about me.
+                </span>
               </p>
               <div
                 className="social__link--buttons"
@@ -77,6 +93,7 @@ function Header() {
             </div>
             <div className="header__scroll--btns">
               <button
+                onClick={scrollToComponent}
                 className="experience hover-btn"
                 data-aos="fade-left"
                 data-aos-duration="1000"
@@ -101,17 +118,18 @@ function Header() {
             <div className="envelope__btn" onClick={() => setOpenModal(true)}>
               <FontAwesomeIcon icon={faEnvelope} className="envelope__img" />
             </div>
-           {openModal && <div className="modal">
-            <div className="close__modal" onClick={() => setOpenModal(false)}>
-              X
-            </div>
-                <div className="modal__left">
-                  About Me 
+            {openModal && (
+              <div className="modal">
+                <div
+                  className="close__modal"
+                  onClick={() => setOpenModal(false)}
+                >
+                  X
                 </div>
-                <div className="modal__right">
-                  Contact Me
-                </div>
-            </div>}
+                <div className="modal__left">About Me</div>
+                <div className="modal__right">Contact Me</div>
+              </div>
+            )}
           </div>
         </div>
       </div>

@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import SkinstricPNG from "../assets/Skinstric.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import Video from "../Video/PortfolioVideo.mp4"
+import Video from "../Video/PortfolioVideo.mp4";
 
 function Experience() {
   const [showVideo, setShowVideo] = useState(false);
   const [blurImg, setBlurImg] = useState(false);
+  const MyComponentRef = useRef(null);
 
   function handleMouseEnter() {
     setShowVideo(true);
@@ -28,7 +29,7 @@ function Experience() {
 
   return (
     <>
-      <div id="section experience__section">
+      <div ref={MyComponentRef} id="section experience__section experience">
         <div className="container">
           <h1 className="section__title">Experience</h1>
           <div className="experience__info">
@@ -52,7 +53,7 @@ function Experience() {
             </div>
             <div className={`video__wrapper ${showVideo ? "show" : ""}`}>
               <div className="video">
-                <video src={Video} autoPlay className="video__edit"/>
+                <video src={Video} autoPlay className="video__edit" />
               </div>
             </div>
             <div
