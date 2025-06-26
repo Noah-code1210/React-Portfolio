@@ -10,11 +10,10 @@ import { ScrollContext } from "../contexts/ScrollContext.js"; // <--- IMPORT THE
 AOS.init();
 
 function Header() {
-  // <--- USE useContext TO GET THE REFS AND SCROLL FUNCTION
   const { experienceRef, technologyRef, projectsRef, scrollToSection } =
     useContext(ScrollContext);
 
-  const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState(true);
   const navigate = useNavigate();
 
   const handleScrollToBottom = () => {
@@ -132,8 +131,39 @@ function Header() {
                 >
                   X
                 </div>
-                <div className="modal__left">About Me</div>
-                <div className="modal__right">Contact Me</div>
+                <div className="modal__half modal__left">
+                  <div className="modal__title modal__left--title">
+                    Here's a bit more about me
+                  </div>
+                  <div className="modal__sub-title modal__left--sub-title">
+                    Frontend Software Engineer
+                  </div>
+                </div>
+                <div className="modal__half modal__right">
+                  <div className="modal__title modal__right--title">
+                    Let's have a chat
+                  </div>
+                  <div className="modal__sub-title modal__right--sub-title">
+                    I'm currently open to new opprotunities
+                  </div>
+                  <form id="contact__form" onSubmit="contact(event)">
+                    <div className="form__item" tabIndex={1}>
+                      <label>Name</label>
+                      <input type="text" className="name__input" />
+                    </div>
+                    <div className="form__item">
+                      <label>Email</label>
+                      <input type="text" className="name__input" />
+                    </div>
+                    <div className="form__item">
+                      <label>Message</label>
+                      <textarea type="text" className="name__input"></textarea>
+                    </div>
+                  </form>
+                  <button className="submit__button">
+                    Send it my way
+                  </button>
+                </div>
               </div>
             )}
             <div className="scroll__down" onClick={handleScrollToBottom}>
