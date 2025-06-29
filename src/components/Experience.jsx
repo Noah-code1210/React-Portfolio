@@ -58,7 +58,30 @@ function Experience() {
             </div>
             <div className={`video__wrapper ${showVideo ? "show" : ""}`}>
               <div className="video">
-                <video src={Video} autoPlay className="video__edit" />
+                <h1 className="skinstric__technologies--title">
+                  Technologies Used: 
+                </h1>
+                <br />
+                <ul className="skinstric__technologies--list">
+                  <li className="skinstric__technologies">
+                    React
+                  </li>
+                  <li className="skinstric__technologies">
+                    HTML
+                  </li>
+                  <li className="skinstric__technologies">
+                    CSS
+                  </li>
+                  <li className="skinstric__technologies">
+                    Git
+                  </li>
+                  <li className="skinstric__technologies">
+                    JavaScript
+                  </li>
+                  <li className="skinstric__technologies">
+                    Vercel
+                  </li>
+                </ul>
               </div>
             </div>
             <div

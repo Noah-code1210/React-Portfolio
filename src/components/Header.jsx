@@ -13,7 +13,7 @@ function Header() {
   const { experienceRef, technologyRef, projectsRef, scrollToSection } =
     useContext(ScrollContext);
 
-  const [openModal, setOpenModal] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
   const navigate = useNavigate();
 
   const handleScrollToBottom = () => {
