@@ -1,25 +1,48 @@
-import React, { useState, useContext } from "react"; // Make sure useContext is imported
+import React, { useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faFile } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faFile,
+  faSpinner,
+} from "@fortawesome/free-solid-svg-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useNavigate } from "react-router-dom";
-import { ScrollContext } from "../contexts/ScrollContext.js"; // <--- IMPORT THE CONTEXT HERE
+import { ScrollContext } from "../contexts/ScrollContext.js";
 
 AOS.init();
 
 function Header() {
+  const [showSpinner, setShowSpinner] = useState(false);
+  const [showModalRight, setShowModalRight] = useState(true);
+  const [showLoadingSuccess, setShowLoadingSuccess] = useState(false)
+
+  function ModalLoading() {
+    setShowModalRight(false);
+    setShowSpinner(true);
+    setTimeout(() => {
+      setShowSpinner(false)
+      setShowLoadingSuccess(true)
+    }, 3000);
+  }
+
   const { experienceRef, technologyRef, projectsRef, scrollToSection } =
     useContext(ScrollContext);
 
   const [openModal, setOpenModal] = useState(false);
-  const navigate = useNavigate();
+
+  const handleModalClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    setOpenModal(true);
+  };
 
   const handleScrollToBottom = () => {
     window.scrollTo({
       top: 2800,
-      behavior: "smooth", // For smooth scrolling animation
+      behavior: "smooth",
     });
   };
 
@@ -69,7 +92,7 @@ function Header() {
                 looking for work. Here is some more information
                 <span
                   className="dark__blue dark__blue--about"
-                  onClick={() => setOpenModal(true)}
+                  onClick={handleModalClick}
                 >
                   {" "}
                   about me.
@@ -120,7 +143,7 @@ function Header() {
                 Projects
               </button>
             </div>
-            <div className="envelope__btn" onClick={() => setOpenModal(true)}>
+            <div className="envelope__btn" onClick={handleModalClick}>
               <FontAwesomeIcon icon={faEnvelope} className="envelope__img" />
             </div>
             {openModal && (
@@ -138,31 +161,60 @@ function Header() {
                   <div className="modal__sub-title modal__left--sub-title">
                     Frontend Software Engineer
                   </div>
+                  <div className="modal__para">
+                    My name is Noah, and I am a 19 year old Frontend Software
+                    Engineer who is currently looking work. I am located in
+                    Philadelphia PA, and I am looking to work remotely for any
+                    software engineering companies!
+                    <br />
+                    <br />
+                    While I may still be young, I have a lot to offer for your
+                    company. Longevity, discipline, perserverance, and problem
+                    solving are just a few of the traits and attributes that I
+                    could bring to the table. So, if youre looking for a hard
+                    working employee that is still learning and growing in this
+                    industry, contact me!
+                  </div>
                 </div>
                 <div className="modal__half modal__right">
-                  <div className="modal__title modal__right--title">
-                    Let's have a chat
-                  </div>
-                  <div className="modal__sub-title modal__right--sub-title">
-                    I'm currently open to new opprotunities
-                  </div>
-                  <form id="contact__form" onSubmit="contact(event)">
-                    <div className="form__item" tabIndex={1}>
-                      <label>Name</label>
-                      <input type="text" className="name__input" />
+                  {showModalRight && <div className="modal__right--info">
+                    <div className="modal__title modal__right--title">
+                      Let's have a chat
                     </div>
-                    <div className="form__item">
-                      <label>Email</label>
-                      <input type="text" className="name__input" />
+                    <div className="modal__sub-title modal__right--sub-title">
+                      I'm currently open to new opprotunities
                     </div>
-                    <div className="form__item">
-                      <label>Message</label>
-                      <textarea type="text" className="name__input"></textarea>
+                    <form id="contact__form" onSubmit="contact(event)">
+                      <div className="form__item" tabIndex={1}>
+                        <label>Name</label>
+                        <input type="text" className="name__input" />
+                      </div>
+                      <div className="form__item">
+                        <label>Email</label>
+                        <input type="text" className="name__input" />
+                      </div>
+                      <div className="form__item">
+                        <label>Message</label>
+                        <textarea
+                          type="text"
+                          className="name__input"
+                        ></textarea>
+                      </div>
+                    </form>
+                    <button className="submit__button" onClick={ModalLoading}>
+                      Send it my way
+                    </button>
+                  </div>}
+                  {showSpinner && (
+                    <div className="modal__loading">
+                      <FontAwesomeIcon icon={faSpinner} />
                     </div>
-                  </form>
-                  <button className="submit__button">
-                    Send it my way
-                  </button>
+                  )}
+                  {showLoadingSuccess && <div className="loading__success--state">
+                    <h1 className="loading__success--title">
+                      Your message has been sent to Noah! Thank you for your time
+                    </h1>
+                  </div>}
                 </div>
               </div>
             )}

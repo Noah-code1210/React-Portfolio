@@ -73,15 +73,21 @@ function Experience() {
                     CSS
                   </li>
                   <li className="skinstric__technologies">
-                    Git
+                    JavaScript
                   </li>
                   <li className="skinstric__technologies">
-                    JavaScript
+                    Git
                   </li>
                   <li className="skinstric__technologies">
                     Vercel
                   </li>
                 </ul>
+                <h1 className="skinstric__technologies--title timeframe__title">
+                  Timeframe: 
+                </h1>
+                <h2 className="timeframe__info">
+                  May 2025 - July 2025
+                </h2>
               </div>
             </div>
             <div
