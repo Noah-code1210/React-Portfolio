@@ -56,8 +56,8 @@ function Experience() {
                 mission.
               </h3>
             </div>
-            <div className={`video__wrapper ${showVideo ? "show" : ""}`}>
-              <div className="video">
+            <div className={`extra__info--wrapper ${showVideo ? "show" : ""}`}>
+              <div className="extra__info">
                 <h1 className="skinstric__technologies--title">
                   Technologies Used: 
                 </h1>
