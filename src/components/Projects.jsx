@@ -33,7 +33,9 @@ function Projects() {
   return (
     <div>
       {/* <--- Attach the ref obtained from context to the main wrapping div/section */}
-      <div ref={projectsRef} id="section"> {/* You can keep the existing ID */}
+      <div ref={projectsRef} id="section">
+        {" "}
+        {/* You can keep the existing ID */}
         <div className="container projects__container">
           <div className="section__title">Projects</div>
           <div className="project__info">
@@ -51,15 +53,23 @@ function Projects() {
                 <div className="technologies__used--title">
                   Technologies Used:
                   <div className="technologies__used--para">
-                    React, Git, HTML, CSS, JS
+                    React, Git, HTML, CSS, JS, Vercel
                   </div>
                 </div>
                 <div className="project__links">
                   <div className="vercel__project--link">
-                    <FontAwesomeIcon icon={faLink} className="link" onClick={navToLibrary} />
+                    <FontAwesomeIcon
+                      icon={faLink}
+                      className="link"
+                      onClick={navToLibrary}
+                    />
                   </div>
                   <div className="vercel__project--link">
-                    <FontAwesomeIcon icon={faGithub} className="link" onClick={navToLibraryGit} />
+                    <FontAwesomeIcon
+                      icon={faGithub}
+                      className="link"
+                      onClick={navToLibraryGit}
+                    />
                   </div>
                 </div>
               </div>
@@ -69,26 +79,34 @@ function Projects() {
           <div className="project__info">
             <div className="project__wrapper">
               <div className="project__text">
-                <div className="project__title">Skinstric A.I</div>
+                <div className="project__title">Tesla Clone</div>
                 <div className="project__description">
-                  This project I created was for my virtual internship listed above.
-                  The main objective was to not only make the website user friendly, but also
-                  give it a unique vibe for the users to enjoy their experience. I also implemented
-                  rest API's to give the most accurate results possible.
+                  This project was mainly for the fun of it, but I also used it
+                  to learn more about Next.js and its capabilites. To make it
+                  more complex, I implemented not only a login feature, but also
+                  a "Create Account" feature which is fully functional as well. 
                 </div>
                 <br />
                 <div className="technologies__used--title">
                   Technologies Used:
                   <div className="technologies__used--para">
-                    React, Git, HTML, CSS, JS, Vercel, Node.js
+                    Next.js, Git, HTML, CSS, JS, Vercel
                   </div>
                 </div>
                 <div className="project__links">
                   <div className="vercel__project--link">
-                    <FontAwesomeIcon icon={faLink} className="link" onClick={navToSkinstric} />
+                    <FontAwesomeIcon
+                      icon={faLink}
+                      className="link"
+                      onClick={navToSkinstric}
+                    />
                   </div>
                   <div className="vercel__project--link">
-                    <FontAwesomeIcon icon={faGithub} className="link" onClick={navToSkinstricGit} />
+                    <FontAwesomeIcon
+                      icon={faGithub}
+                      className="link"
+                      onClick={navToSkinstricGit}
+                    />
                   </div>
                 </div>
               </div>
@@ -100,8 +118,9 @@ function Projects() {
               <div className="project__text">
                 <div className="project__title">Ultraverse NFT</div>
                 <div className="project__description">
-                  This project was also for an internship, and its main purpose was to gain more knowledge
-                  on fetching API data and displaying it in multiple different places.
+                  This project was also for an internship, and its main purpose
+                  was to gain more knowledge on fetching API data and displaying
+                  it in multiple different places.
                 </div>
                 <br />
                 <div className="technologies__used--title">
@@ -112,10 +131,18 @@ function Projects() {
                 </div>
                 <div className="project__links">
                   <div className="vercel__project--link">
-                    <FontAwesomeIcon icon={faLink} className="link" onClick={navToNFT} />
+                    <FontAwesomeIcon
+                      icon={faLink}
+                      className="link"
+                      onClick={navToNFT}
+                    />
                   </div>
                   <div className="vercel__project--link">
-                    <FontAwesomeIcon icon={faGithub} className="link" onClick={navToNFTGit} />
+                    <FontAwesomeIcon
+                      icon={faGithub}
+                      className="link"
+                      onClick={navToNFTGit}
+                    />
                   </div>
                 </div>
               </div>

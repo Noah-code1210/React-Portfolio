@@ -1,7 +1,5 @@
-import React, { useState } from "react";
 import myLogo from "../assets/mylogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link, useSearchParams } from "react-router-dom";
 
 function Nav() {
   function navToResume() {
@@ -19,11 +17,9 @@ function Nav() {
               <img src={myLogo} alt="" className="nav__img" />
             </figure>
             <ul className="nav__link--list">
-              <Link to="/aboutMe">
                 <li className="nav__link">
-                  <a href="#aboutMe">About Me</a>
+                  <a href="#aboutMe">Contact Me</a>
                 </li>
-              </Link>
               <li className="nav__link">
                 <a href="#projects" onClick={navToResume}>
                   Resume

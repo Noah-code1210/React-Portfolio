@@ -15,14 +15,14 @@ AOS.init();
 function Header() {
   const [showSpinner, setShowSpinner] = useState(false);
   const [showModalRight, setShowModalRight] = useState(true);
-  const [showLoadingSuccess, setShowLoadingSuccess] = useState(false)
+  const [showLoadingSuccess, setShowLoadingSuccess] = useState(false);
 
   function ModalLoading() {
     setShowModalRight(false);
     setShowSpinner(true);
     setTimeout(() => {
-      setShowSpinner(false)
-      setShowLoadingSuccess(true)
+      setShowSpinner(false);
+      setShowLoadingSuccess(true);
     }, 3000);
   }
 
@@ -175,46 +175,86 @@ function Header() {
                     working employee that is still learning and growing in this
                     industry, contact me!
                   </div>
+                  <h2 className="my__specialties--title">I specialize in:</h2>
+                  <div className="specialties">
+                    <div className="react__wrapper">
+                      <img
+                        src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+                        alt=""
+                        className="specialty__img"
+                      />
+                      <h2 className="react__specialty">React</h2>
+                    </div>
+                    <div className="HTML__wrapper">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                        alt=""
+                        className="specialty__img"
+                      />
+                      <h2 className="HTML__specialty">HTML</h2>
+                    </div>
+                    <div className="CSS__wrapper">
+                      <img
+                        src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+                        alt=""
+                        className="specialty__img"
+                      />
+                      <h2 className="CSS__specialty">CSS</h2>
+                    </div>
+                    <div className="JS__wrapper">
+                      <img
+                        src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+                        alt=""
+                        className="specialty__img"
+                      />
+                      <h2 className="JS__specialty">JavaScript</h2>
+                    </div>
+                  </div>
                 </div>
                 <div className="modal__half modal__right">
-                  {showModalRight && <div className="modal__right--info">
-                    <div className="modal__title modal__right--title">
-                      Let's have a chat
+                  {showModalRight && (
+                    <div className="modal__right--info">
+                      <div className="modal__title modal__right--title">
+                        Let's have a chat
+                      </div>
+                      <div className="modal__sub-title modal__right--sub-title">
+                        I'm currently open to new opprotunities
+                      </div>
+                      <form id="contact__form" onSubmit="contact(event)">
+                        <div className="form__item" tabIndex={1}>
+                          <label>Name</label>
+                          <input type="text" className="name__input" />
+                        </div>
+                        <div className="form__item">
+                          <label>Email</label>
+                          <input type="text" className="name__input" />
+                        </div>
+                        <div className="form__item">
+                          <label>Message</label>
+                          <textarea
+                            type="text"
+                            className="name__input"
+                          ></textarea>
+                        </div>
+                      </form>
+                      <button className="submit__button" onClick={ModalLoading}>
+                        Send it my way
+                      </button>
                     </div>
-                    <div className="modal__sub-title modal__right--sub-title">
-                      I'm currently open to new opprotunities
-                    </div>
-                    <form id="contact__form" onSubmit="contact(event)">
-                      <div className="form__item" tabIndex={1}>
-                        <label>Name</label>
-                        <input type="text" className="name__input" />
-                      </div>
-                      <div className="form__item">
-                        <label>Email</label>
-                        <input type="text" className="name__input" />
-                      </div>
-                      <div className="form__item">
-                        <label>Message</label>
-                        <textarea
-                          type="text"
-                          className="name__input"
-                        ></textarea>
-                      </div>
-                    </form>
-                    <button className="submit__button" onClick={ModalLoading}>
-                      Send it my way
-                    </button>
-                  </div>}
+                  )}
                   {showSpinner && (
                     <div className="modal__loading">
                       <FontAwesomeIcon icon={faSpinner} />
                     </div>
                   )}
-                  {showLoadingSuccess && <div className="loading__success--state">
-                    <h1 className="loading__success--title">
-                      Your message has been sent to Noah! Thank you for your time
-                    </h1>
-                  </div>}
+                  {showLoadingSuccess && (
+                    <div className="loading__success--state">
+                      <h1 className="loading__success--title">
+                        Your message has been sent to Noah! Thank you for your
+                        time
+                      </h1>
+                    </div>
+                  )}
                 </div>
               </div>
             )}
