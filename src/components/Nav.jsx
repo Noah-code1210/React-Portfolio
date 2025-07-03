@@ -17,11 +17,11 @@ function Nav() {
               <img src={myLogo} alt="" className="nav__img" />
             </figure>
             <ul className="nav__link--list">
-                <li className="nav__link">
-                  <a href="#aboutMe">Contact Me</a>
+                <li className="nav__link" >
+                  <a href="">About Me</a>
                 </li>
               <li className="nav__link">
-                <a href="#projects" onClick={navToResume}>
+                <a href="" onClick={navToResume}>
                   Resume
                 </a>
               </li>

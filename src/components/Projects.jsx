@@ -1,6 +1,6 @@
 import React, { useContext } from "react"; // <--- Import useContext
 import Library from "../assets/Library.png";
-import SkinstricProject from "../assets/SkinstricProjects.png";
+import Treact from "../assets/Treact.png";
 import NFT from "../assets/NFT.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -17,11 +17,11 @@ function Projects() {
   function navToLibraryGit() {
     window.open("https://github.com/Noah-code1210/Library-React");
   }
-  function navToSkinstric() {
-    window.open("https://skinstric-ai-gules.vercel.app/");
+  function navToTreact() {
+    window.open("https://noah-code1210.github.io/Treact-Project/");
   }
-  function navToSkinstricGit() {
-    window.open("https://github.com/Noah-code1210/Skinstric-AI");
+  function navToTreactGit() {
+    window.open("https://github.com/Noah-code1210/Treact-Project");
   }
   function navToNFT() {
     window.open("https://noah-nft-internship.vercel.app/");
@@ -79,48 +79,13 @@ function Projects() {
           <div className="project__info">
             <div className="project__wrapper">
               <div className="project__text">
-                <div className="project__title">Tesla Clone</div>
-                <div className="project__description">
-                  This project was mainly for the fun of it, but I also used it
-                  to learn more about Next.js and its capabilites. To make it
-                  more complex, I implemented not only a login feature, but also
-                  a "Create Account" feature which is fully functional as well. 
-                </div>
-                <br />
-                <div className="technologies__used--title">
-                  Technologies Used:
-                  <div className="technologies__used--para">
-                    Next.js, Git, HTML, CSS, JS, Vercel
-                  </div>
-                </div>
-                <div className="project__links">
-                  <div className="vercel__project--link">
-                    <FontAwesomeIcon
-                      icon={faLink}
-                      className="link"
-                      onClick={navToSkinstric}
-                    />
-                  </div>
-                  <div className="vercel__project--link">
-                    <FontAwesomeIcon
-                      icon={faGithub}
-                      className="link"
-                      onClick={navToSkinstricGit}
-                    />
-                  </div>
-                </div>
-              </div>
-              <img src={SkinstricProject} alt="" className="project__img" />
-            </div>
-          </div>
-          <div className="project__info">
-            <div className="project__wrapper">
-              <div className="project__text">
                 <div className="project__title">Ultraverse NFT</div>
                 <div className="project__description">
                   This project was also for an internship, and its main purpose
                   was to gain more knowledge on fetching API data and displaying
-                  it in multiple different places.
+                  it in multiple different places. To give it more of an
+                  interactive vibe, I added a lot of "onClick" functionality for
+                  the users to play around with and explore the website more.
                 </div>
                 <br />
                 <div className="technologies__used--title">
@@ -147,6 +112,36 @@ function Projects() {
                 </div>
               </div>
               <img src={NFT} alt="" className="project__img" />
+            </div>
+          </div>
+          <div className="project__info">
+            <div className="project__wrapper">
+              <div className="project__text">
+                <div className="project__title">Treact </div>
+                <div className="project__description"></div>
+                <br />
+                <div className="technologies__used--title">
+                  Technologies Used:
+                  <div className="technologies__used--para">HTML, CSS</div>
+                </div>
+                <div className="project__links">
+                  <div className="vercel__project--link">
+                    <FontAwesomeIcon
+                      icon={faLink}
+                      className="link"
+                      onClick={navToTreact}
+                    />
+                  </div>
+                  <div className="vercel__project--link">
+                    <FontAwesomeIcon
+                      icon={faGithub}
+                      className="link"
+                      onClick={navToTreactGit}
+                    />
+                  </div>
+                </div>
+              </div>
+              <img src={Treact} alt="" className="project__img" />
             </div>
           </div>
         </div>
