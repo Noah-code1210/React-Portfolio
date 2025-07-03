@@ -118,11 +118,18 @@ function Projects() {
             <div className="project__wrapper">
               <div className="project__text">
                 <div className="project__title">Treact </div>
-                <div className="project__description"></div>
+                <div className="project__description">
+                  While this project does not have any functionality to it, it
+                  displays my skills in basic CSS and HTML. It was one of the
+                  first projects I ever completed, and it helped me master the
+                  use of flexbox, margins, text-align, and more. While I could
+                  add functionality to it now, I feel that the siplicity of this
+                  project shows my broad knowledge of basic frontend coding.
+                </div>
                 <br />
                 <div className="technologies__used--title">
                   Technologies Used:
-                  <div className="technologies__used--para">HTML, CSS</div>
+                  <div className="technologies__used--para">HTML and CSS</div>
                 </div>
                 <div className="project__links">
                   <div className="vercel__project--link">
