@@ -17,17 +17,23 @@ function Projects() {
   function navToLibraryGit() {
     window.open("https://github.com/Noah-code1210/Library-React");
   }
-  function navToTreact() {
-    window.open("https://noah-code1210.github.io/Treact-Project/");
-  }
-  function navToTreactGit() {
-    window.open("https://github.com/Noah-code1210/Treact-Project");
-  }
   function navToNFT() {
     window.open("https://noah-nft-internship.vercel.app/");
   }
   function navToNFTGit() {
     window.open("https://github.com/Noah-code1210/Noah-NFT-Internship");
+  }
+  function navToTesla() {
+    window.open("https://noah-nft-internship.vercel.app/");
+  }
+  function navToTeslaGit() {
+    window.open("https://github.com/Noah-code1210/Tesla-clone-next");
+  }
+  function navToTreact() {
+    window.open("https://noah-code1210.github.io/Treact-Project/");
+  }
+  function navToTreactGit() {
+    window.open("https://github.com/Noah-code1210/Treact-Project");
   }
 
   return (
@@ -112,6 +118,38 @@ function Projects() {
                 </div>
               </div>
               <img src={NFT} alt="" className="project__img" />
+            </div>
+          </div>
+          <div className="project__info">
+            <div className="project__wrapper">
+              <div className="project__text">
+                <div className="project__title">Tesla Clone</div>
+                <div className="project__description">
+                  
+                </div>
+                <br />
+                <div className="technologies__used--title">
+                  Technologies Used:
+                  <div className="technologies__used--para">Next.js, HTML, CSS, JavaScript, Redux</div>
+                </div>
+                <div className="project__links">
+                  <div className="vercel__project--link">
+                    <FontAwesomeIcon
+                      icon={faLink}
+                      className="link"
+                      onClick={navToTesla}
+                    />
+                  </div>
+                  <div className="vercel__project--link">
+                    <FontAwesomeIcon
+                      icon={faGithub}
+                      className="link"
+                      onClick={navToTeslaGit}
+                    />
+                  </div>
+                </div>
+              </div>
+              <img src={Treact} alt="" className="project__img" />
             </div>
           </div>
           <div className="project__info">
