@@ -125,12 +125,20 @@ function Projects() {
               <div className="project__text">
                 <div className="project__title">Tesla Clone</div>
                 <div className="project__description">
-                  
+                  For this project, I decided to make my first ever clone
+                  project using a framework that I had been learning and taking
+                  notes on, Next.js! This is a project that really doesn't have
+                  too much functionality, but it displays my strengths in UI
+                  design and creativeness as well. I added a non-functional
+                  login and signup page, which I plan to make functional with
+                  firebase soon!
                 </div>
                 <br />
                 <div className="technologies__used--title">
                   Technologies Used:
-                  <div className="technologies__used--para">Next.js, HTML, CSS, JavaScript, Redux</div>
+                  <div className="technologies__used--para">
+                    Next.js, HTML, CSS, JavaScript, Redux
+                  </div>
                 </div>
                 <div className="project__links">
                   <div className="vercel__project--link">
