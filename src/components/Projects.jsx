@@ -2,6 +2,7 @@ import React, { useContext } from "react"; // <--- Import useContext
 import Library from "../assets/Library.png";
 import Treact from "../assets/Treact.png";
 import NFT from "../assets/NFT.png";
+import Tesla from "../assets/Tesla.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
@@ -157,7 +158,7 @@ function Projects() {
                   </div>
                 </div>
               </div>
-              <img src={Treact} alt="" className="project__img" />
+              <img src={Tesla} alt="" className="project__img" />
             </div>
           </div>
           <div className="project__info">
