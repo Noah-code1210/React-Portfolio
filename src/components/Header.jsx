@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -9,8 +9,7 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { ScrollContext } from "../contexts/ScrollContext.js";
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 AOS.init();
 
@@ -21,12 +20,11 @@ function Header() {
 
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-
+  const sendEmail = (event) => {
+    event.preventDefault()
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
-        publicKey: "YOUR_PUBLIC_KEY",
+      .sendForm("service_eamxcjq", "template_ujadqti", form.current, {
+        publicKey: "MHJ3dcy-OK4NGMiSR",
       })
       .then(
         () => {
@@ -44,6 +42,7 @@ function Header() {
     setTimeout(() => {
       setShowSpinner(false);
       setShowLoadingSuccess(true);
+      sendEmail(true)
     }, 3000);
   }
 
@@ -241,26 +240,21 @@ function Header() {
                       <div className="modal__sub-title modal__right--sub-title">
                         I'm currently open to new opprotunities
                       </div>
-                      <form id="contact__form" onSubmit="contact(event)">
-                        <div className="form__item" tabIndex={1}>
+                      <form ref={form} onSubmit={sendEmail}>
+                        <div className="form__item">
                           <label>Name</label>
-                          <input type="text" className="name__input" />
+                          <input type="text" name="name__input" />
                         </div>
                         <div className="form__item">
                           <label>Email</label>
-                          <input type="text" className="name__input" />
+                          <input type="email" name="name__input" />
                         </div>
                         <div className="form__item">
                           <label>Message</label>
-                          <textarea
-                            type="text"
-                            className="name__input"
-                          ></textarea>
+                          <textarea name="message" />
                         </div>
+                        <input type="submit" value="Send" className="submit__button" />
                       </form>
-                      <button className="submit__button" onClick={ModalLoading}>
-                        Send it my way
-                      </button>
                     </div>
                   )}
                   {showSpinner && (
