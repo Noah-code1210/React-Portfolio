@@ -21,7 +21,7 @@ function Header() {
   const form = useRef();
 
   const sendEmail = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     emailjs
       .sendForm("service_eamxcjq", "template_ujadqti", form.current, {
         publicKey: "MHJ3dcy-OK4NGMiSR",
@@ -29,6 +29,12 @@ function Header() {
       .then(
         () => {
           console.log("SUCCESS!");
+          setShowModalRight(false);
+          setShowSpinner(true);
+          setTimeout(() => {
+            setShowSpinner(false);
+            setShowLoadingSuccess(true);
+          }, 3000);
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -37,12 +43,9 @@ function Header() {
   };
 
   function ModalLoading() {
-    setShowModalRight(false);
-    setShowSpinner(true);
     setTimeout(() => {
       setShowSpinner(false);
       setShowLoadingSuccess(true);
-      sendEmail(true)
     }, 3000);
   }
 
@@ -253,7 +256,11 @@ function Header() {
                           <label>Message</label>
                           <textarea name="message" />
                         </div>
-                        <input type="submit" value="Send" className="submit__button" />
+                        <input
+                          type="submit"
+                          value="Send"
+                          className="submit__button"
+                        />
                       </form>
                     </div>
                   )}
