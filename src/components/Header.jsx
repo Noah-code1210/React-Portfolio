@@ -9,6 +9,8 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { ScrollContext } from "../contexts/ScrollContext.js";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 AOS.init();
 
@@ -16,6 +18,25 @@ function Header() {
   const [showSpinner, setShowSpinner] = useState(false);
   const [showModalRight, setShowModalRight] = useState(true);
   const [showLoadingSuccess, setShowLoadingSuccess] = useState(false);
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
+        publicKey: "YOUR_PUBLIC_KEY",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
 
   function ModalLoading() {
     setShowModalRight(false);
