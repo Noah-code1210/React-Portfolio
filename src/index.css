@@ -790,6 +790,75 @@ MEDIA
 
 @media (max-width: 1470px) {
   .tech__container {
-    display: none;
+    height: 1100px;
+  }
+}
+
+@media (max-width: 1374px) {
+  .tech__list--wrapper {
+    margin-left: 200px;
+  }
+  .technology__img {
+    width: 150px;
+    height: 150px;
+    margin: 0 100px 150px 0;
+  }
+  .technology__title {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 1255px) {
+  .extra__info {
+    width: 420px;
+    left: 700px;
+  }
+}
+
+@media (max-width: 1099px) {
+  .extra__info {
+    width: 370px;
+    left: 650px;
+  }
+}
+
+@media (max-width: 984px) {
+  .technology__img {
+    margin: 0 80px 150px 0;
+  }
+  .tech__list--wrapper {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 975px) {
+  .extra__info {
+    width: 330px;
+    left: 590px;
+  }
+  .tech__list--wrapper {
+    margin-left: 160px;
+  }
+}
+
+@media (max-width: 882px) {
+  .extra__info {
+    width: 330px;
+    left: 450px;
+  }
+  .tech__list--wrapper {
+    margin-left: 70px;
+  }
+}
+
+@media (max-width: 795px) {
+  .tech__container {
+    height: 1200px;
+  }
+  .technology__img {
+    margin: 0 80px 150px 80px;
+  }
+  .technology__title {
+    margin-left: 130px;
   }
 }
