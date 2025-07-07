@@ -39,7 +39,7 @@ function Experience() {
               <h2 className="experience__intern--title">
                 Skinstric Virtual Internship
               </h2>
-              <h3 className="experience__para">
+              <h3 className="experience__para--job">
                 For this virtual internship, I built a responsive website for a
                 skincare brand known for their AI-driven solutions. I used React
                 as the main framework, along with other tech like HTML, CSS, and
@@ -48,8 +48,9 @@ function Experience() {
                 either scan an already existing image of themself from their
                 camera roll, or snap a picture through the website right then
                 and there!
-                <br />
-                <br />
+              </h3>
+              <br />
+              <h3 className="experience__para--learn">
                 Throughout this internship, I gained hands-on experience
                 collaborating remotely, implementing best practices, and
                 aligning tech solutions with the brand’s innovative AI-focused
@@ -76,9 +77,7 @@ function Experience() {
                   Timeframe:
                 </h1>
                 <h2 className="timeframe__info">May 2025 - July 2025</h2>
-                <div className="video__playing">
-                  Video...
-                </div>
+                <div className="video__playing">Video...</div>
                 <div className="responsive__pixels">
                   **RESPONSIVE FROM 1470PX OR LESS**
                 </div>

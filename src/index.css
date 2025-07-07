@@ -493,7 +493,8 @@ EXPERIENCE
   text-align: end;
 }
 
-.experience__para {
+.experience__para--job,
+.experience__para--learn {
   width: 100%;
   max-width: 700px;
   line-height: 28px;
@@ -501,6 +502,10 @@ EXPERIENCE
   right: 0;
   margin-right: 80px;
   text-align: start;
+}
+
+.experience__para--learn {
+  bottom: -320px;
 }
 
 .experience__img--wrapper {
@@ -894,6 +899,55 @@ MEDIA
     margin-right: 0px;
   }
   .scroll__down {
-    bottom: 20px;
+    bottom: 80px;
+  }
+  .envelope__btn {
+    width: 100%;
+    max-width: 64px;
+    height: 64px;
+    top: 600px;
+    right: 410px;
+  }
+  .fa-envelope {
+    width: 28px;
+    height: 28px;
+  }
+  .section__title {
+    margin-bottom: 52px;
+  }
+  .experience__img--wrapper {
+    display: none;
+  }
+  .live__links {
+    position: absolute;
+    display: none;
+  }
+  .experience__intern--title {
+    margin-right: 52px;
+    font-size: 24px;
+  }
+  .experience__para--job {
+    margin-right: 0px;
+    font-size: 16px;
+  }
+  .experience__para--learn {
+    display: none;
+  }
+  .experience__container {
+    height: 400px;
+  }
+  .tech__list--wrapper {
+    margin-left: 30px;
+  }
+  .technology__img {
+    width: 74px;
+    height: 74px;
+    margin: 0 40px 70px 0;
+  }
+  .technology__title {
+    display: none;
+  }
+  .tech__container {
+    height: 500px;
   }
 }
