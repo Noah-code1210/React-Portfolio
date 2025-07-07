@@ -94,9 +94,15 @@ function Experience() {
             <div className="live__links">
               <div className="vercel__link" onClick={navToAI}>
                 <FontAwesomeIcon icon={faLink} className="link" />
+                <div className="live__link--title">
+                  Live Link
+                </div>
               </div>
               <div className="vercel__link" onClick={navToGithub}>
                 <FontAwesomeIcon icon={faGithub} className="link" />
+                <div className="live__link--title">
+                  Github Link
+                </div>
               </div>
             </div>
           </div>

@@ -541,6 +541,9 @@ EXPERIENCE
   bottom: 58px;
   border-radius: 5px;
 }
+.live__link--title {
+  display: none;
+}
 
 .link {
   width: 34px;
@@ -918,9 +921,18 @@ MEDIA
   .experience__img--wrapper {
     display: none;
   }
+  .vercel__link {
+    display: flex;
+    align-items: center;
+  }
   .live__links {
     position: absolute;
-    display: none;
+    margin-left: 52px;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+  .live__link--title {
+    display: block;
   }
   .experience__intern--title {
     margin-right: 52px;
@@ -929,12 +941,16 @@ MEDIA
   .experience__para--job {
     margin-right: 0px;
     font-size: 16px;
+    text-align: center;
   }
   .experience__para--learn {
     display: none;
   }
   .experience__container {
-    height: 400px;
+    height: 600px;
+  }
+  .tech__container {
+    margin-top: 0px;
   }
   .tech__list--wrapper {
     margin-left: 30px;
