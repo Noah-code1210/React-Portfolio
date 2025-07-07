@@ -1,4 +1,4 @@
-import React, { useContext } from "react"; // <--- Import useContext
+import React, { useContext } from "react"; 
 import Library from "../assets/Library.png";
 import Treact from "../assets/Treact.png";
 import NFT from "../assets/NFT.png";
@@ -6,10 +6,9 @@ import Tesla from "../assets/Tesla.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
-import { ScrollContext } from "../contexts/ScrollContext.js"; // <--- Import ScrollContext
+import { ScrollContext } from "../contexts/ScrollContext.js"; 
 
 function Projects() {
-  // <--- Use useContext to get the specific ref for this component
   const { projectsRef } = useContext(ScrollContext);
 
   function navToLibrary() {
@@ -25,7 +24,7 @@ function Projects() {
     window.open("https://github.com/Noah-code1210/Noah-NFT-Internship");
   }
   function navToTesla() {
-    window.open("https://noah-nft-internship.vercel.app/");
+    window.open("https://tesla-clone-next-eta.vercel.app/");
   }
   function navToTeslaGit() {
     window.open("https://github.com/Noah-code1210/Tesla-clone-next");

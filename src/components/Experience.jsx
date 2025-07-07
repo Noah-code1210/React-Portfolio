@@ -4,15 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Video from "../Video/PortfolioVideo.mp4";
-import { ScrollContext } from "../contexts/ScrollContext.js"; 
+import { ScrollContext } from "../contexts/ScrollContext.js";
 
 function Experience() {
-  // <--- USE useContext TO GET THE SPECIFIC REF FOR THIS COMPONENT
   const { experienceRef } = useContext(ScrollContext);
 
   const [showVideo, setShowVideo] = useState(false);
   const [blurImg, setBlurImg] = useState(false);
-  // REMOVE: const MyComponentRef = useRef(null); // This is no longer needed here
 
   function handleMouseEnter() {
     setShowVideo(true);
@@ -33,9 +31,8 @@ function Experience() {
 
   return (
     <>
-      {/* <--- ATTACH THE REF OBTAINED FROM CONTEXT TO THE MAIN WRAPPING DIV/SECTION */}
       <div ref={experienceRef} id="section experience__section experience">
-        <div className="container">
+        <div className="experience__container container">
           <h1 className="section__title">Experience</h1>
           <div className="experience__info">
             <div className="experience__text">
@@ -44,50 +41,47 @@ function Experience() {
               </h2>
               <h3 className="experience__para">
                 For this virtual internship, I built a responsive website for a
-                skincare brand known for their AI-driven solutions. I used
-                React.js as the main framework, along with other tech like HTML,
-                CSS, and JavaScript to design and develop user-friendly
-                interfaces.
+                skincare brand known for their AI-driven solutions. I used React
+                as the main framework, along with other tech like HTML, CSS, and
+                JavaScript to design and develop user-friendly interfaces. To
+                make the experience easier for the users, I allowed them to
+                either scan an already existing image of themself from their
+                camera roll, or snap a picture through the website right then
+                and there!
                 <br />
                 <br />
                 Throughout this internship, I gained hands-on experience
                 collaborating remotely, implementing best practices, and
                 aligning tech solutions with the brand’s innovative AI-focused
-                mission.
+                mission. On top of getting hands-on experience, I was also able
+                to learn a lot more about coding, and how it can change
+                depending on the environment or job that youre working in.
               </h3>
             </div>
             <div className={`extra__info--wrapper ${showVideo ? "show" : ""}`}>
               <div className="extra__info">
                 <h1 className="skinstric__technologies--title">
-                  Technologies Used: 
+                  Technologies Used:
                 </h1>
                 <br />
                 <ul className="skinstric__technologies--list">
-                  <li className="skinstric__technologies">
-                    React
-                  </li>
-                  <li className="skinstric__technologies">
-                    HTML
-                  </li>
-                  <li className="skinstric__technologies">
-                    CSS
-                  </li>
-                  <li className="skinstric__technologies">
-                    JavaScript
-                  </li>
-                  <li className="skinstric__technologies">
-                    Git
-                  </li>
-                  <li className="skinstric__technologies">
-                    Vercel
-                  </li>
+                  <li className="skinstric__technologies">React</li>
+                  <li className="skinstric__technologies">HTML</li>
+                  <li className="skinstric__technologies">CSS</li>
+                  <li className="skinstric__technologies">JavaScript</li>
+                  <li className="skinstric__technologies">Git</li>
+                  <li className="skinstric__technologies">Vercel</li>
                 </ul>
                 <h1 className="skinstric__technologies--title timeframe__title">
-                  Timeframe: 
+                  Timeframe:
                 </h1>
-                <h2 className="timeframe__info">
-                  May 2025 - July 2025
-                </h2>
+                <h2 className="timeframe__info">May 2025 - July 2025</h2>
+                <div className="video__playing">
+                  Video...
+                </div>
+                <div className="responsive__pixels">
+                  **RESPONSIVE FROM 1470PX OR LESS**
+                </div>
               </div>
             </div>
             <div

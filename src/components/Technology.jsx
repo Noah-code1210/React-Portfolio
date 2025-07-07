@@ -1,17 +1,15 @@
-import React, { useContext } from "react"; // <--- Import useContext
+import React, { useContext } from "react"; 
 import Git from "../assets/Git.png";
 import TailwindCSS from "../assets/TailwindCSS.png";
 import NextJS from "../assets/NextJS.png";
 import Redux from "../assets/Redux.png";
-import { ScrollContext } from "../contexts/ScrollContext.js"; // <--- Import ScrollContext
+import { ScrollContext } from "../contexts/ScrollContext.js"; 
 
 function Technology() {
-  // <--- Use useContext to get the specific ref for this component
   const { technologyRef } = useContext(ScrollContext);
 
   return (
     <>
-      {/* <--- Attach the ref obtained from context to the main wrapping div/section */}
       <div ref={technologyRef} id="section tech__section">
         <div className="container tech__container">
           <div className="section__title">Technology</div>
